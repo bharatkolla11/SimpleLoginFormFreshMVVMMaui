@@ -1,4 +1,6 @@
-﻿namespace SimpleLoginFormFreshMVVMMaui;
+﻿using FreshMvvm.Maui;
+
+namespace SimpleLoginFormFreshMVVMMaui;
 
 public partial class App : Application
 {
@@ -6,6 +8,7 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new MainPage();
+		var mainPage = FreshPageModelResolver.ResolvePageModel<LoginPageModel>();
+		MainPage = new FreshNavigationContainer(mainPage);
 	}
 }

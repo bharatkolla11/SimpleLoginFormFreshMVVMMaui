@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SimpleLoginFormFreshMVVMMaui.LoginPage"
+             Title="LoginPage"
+             BackgroundColor="White">
+    
+    <StackLayout HorizontalOptions="FillAndExpand" 
+                 VerticalOptions="FillAndExpand"
+                 Padding="20" 
+                 Spacing="10">
+
+        <Label Text="{Binding UserNameLabel}"
+               HorizontalOptions="StartAndExpand"
+               FontSize="Subtitle"
+               FontAttributes="Bold"/>
+        
+        <Entry HorizontalOptions="FillAndExpand"
+               Text="{Binding UserNameEntryText}"
+               Placeholder="{Binding UserNameEntryPlaceHolder}"
+               ClearButtonVisibility="WhileEditing"
+               AutomationId="UserEntryAutomationID"/>
+
+        <Label Text="{Binding PasswordNameLabel}}"
+               HorizontalOptions="StartAndExpand"
+               FontSize="Subtitle"
+               FontAttributes="Bold"/>
+        
+        <Entry HorizontalOptions="FillAndExpand"
+               Text="{Binding PasswordEntryText}"
+               Placeholder="{Binding PasswordEntryPlaceHolder}"
+               ClearButtonVisibility="WhileEditing"
+               IsPassword="True"
+               AutomationId="PasswordEntryAutomationID"/>
+        
+        <Button Text="{Binding SubmitButtonText}"
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="Violet"
+                FontAttributes="Bold"
+                FontSize="Subtitle"
+                Command="{Binding SubmitButtonCommand}"
+                AutomationId="SubmitButtonAutomationID"/>
+
+    </StackLayout>
+</ContentPage>
