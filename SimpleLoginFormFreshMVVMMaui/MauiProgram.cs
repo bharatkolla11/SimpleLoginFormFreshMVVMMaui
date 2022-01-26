@@ -1,4 +1,6 @@
-﻿namespace SimpleLoginFormFreshMVVMMaui;
+﻿using FreshMvvm.Maui.Extensions;
+
+namespace SimpleLoginFormFreshMVVMMaui;
 
 public static class MauiProgram
 {
@@ -11,6 +13,12 @@ public static class MauiProgram
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 			});
+
+		builder.Services.AddTransient<LoginPage>();
+
+		builder.Services.AddTransient<LoginPageModel>();
+
+		builder.Services.UseFreshMvvm();
 
 		return builder.Build();
 	}
