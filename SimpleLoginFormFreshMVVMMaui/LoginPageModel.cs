@@ -128,6 +128,8 @@ namespace SimpleLoginFormFreshMVVMMaui
                     await CoreMethods.DisplayAlert("Error", "One or More required fields are empty", "OK");
                     return;
                 }
+
+                await CoreMethods.PushPageModel<MainPageModel>();
             }
             catch(Exception ex)
             {
