@@ -21,7 +21,7 @@
                ClearButtonVisibility="WhileEditing"
                AutomationId="UserEntryAutomationID"/>
 
-        <Label Text="{Binding PasswordNameLabel}}"
+        <Label Text="{Binding PasswordNameLabel}"
                HorizontalOptions="StartAndExpand"
                FontSize="Subtitle"
                FontAttributes="Bold"/>
